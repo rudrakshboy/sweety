@@ -48,7 +48,7 @@ def _onUnMuteRequest(client, cb):
             else:
                 client.answer_callback_query(
                     cb.id,
-                    text="❗ You have been muted by admins due to some other reason.",
+                    text="❗ Yуσυ нανє вєєη мυтє∂ ву α∂мιηѕ ∂υє тσ ѕσмє σтнєя яєαѕση.",
                     show_alert=True,
                 )
         else:
@@ -58,13 +58,13 @@ def _onUnMuteRequest(client, cb):
             ):
                 client.send_message(
                     chat_id,
-                    f"❗ **{cb.from_user.mention} is trying to UnMute himself but i can't unmute him because i am not an admin in this chat add me as admin again.**\n__#Leaving this chat...__",
+                    f"❗ **{cb.from_user.mention} ιѕ тяуιηg тσ υηмυтє нιмѕєℓƒ вυт ι ¢αη'т υηмυтє нιм вє¢αυѕє ι αм ησт αη α∂мιη ιη тнιѕ ¢нαт α∂∂ мє αѕ α∂мιη αgαιη.**\n__#Leaving this chat...__",
                 )
 
             else:
                 client.answer_callback_query(
                     cb.id,
-                    text="❗ Warning! Don't press the button when you cn talk.",
+                    text="❗ ωαяηιηg! ∂ση'т ρяєѕѕ тнє вυттση ωнєη уσυ ¢αη тαℓк.",
                     show_alert=True,
                 )
 
@@ -86,7 +86,7 @@ def _check_member(client, message):
             except UserNotParticipant:
                 try:
                     sent_message = message.reply_text(
-                        "Welcome {} 🙏 \n **You havent joined our @{} Channel yet** 😭 \n \nPlease Join [Our Channel](https://t.me/{}) and hit the **UNMUTE ME** Button. \n \n ".format(
+                        "Welcome {} 🙏 \n **уσυ нανєηт נσιηє∂ συя @{} ¢нαηηєℓ уєт** 😭 \n \nPlease Join [Our Channel](https://t.me/{}) and hit the **UNMUTE ME** Button. \n \n ".format(
                             message.from_user.mention, channel, channel
                         ),
                         disable_web_page_preview=True,
@@ -111,13 +111,13 @@ def _check_member(client, message):
                     )
                 except ChatAdminRequired:
                     sent_message.edit(
-                        "❗ **Daisy is not admin here..**\n__Give me ban permissions and retry.. \n#Ending FSub...__"
+                        "❗ **Daisy is not admin here..**\n__gινє мє вαη ρєямιѕѕισηѕ αη∂ яєтяу.. \n#Ending FSub...__"
                     )
 
             except ChatAdminRequired:
                 client.send_message(
                     chat_id,
-                    text=f"❗ **I not an admin of @{channel} channel.**\n__Give me admin of that channel and retry.\n#Ending FSub...__",
+                    text=f"❗ **I not an admin of @{channel} channel.**\n__gινє мє α∂мιη σƒ тнαт ¢нαηηєℓ αη∂ яєтяу.\n#Ending FSub...__",
                 )
 
 
